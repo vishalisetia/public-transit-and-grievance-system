@@ -1,12 +1,4 @@
-<%-- 
-    Document   : find_route
-    Created on : May 29, 2020, 10:56:50 PM
-    Author     : Vishali-PC
---%>
-
 <%@ include file="header_user.jsp" %>
-
-
 <form name='frm' method='post' action='find_route.jsp' >
     <table style = "height:200px; width:100%; border:0; cellspacing:0; cellpadding:10px">
         <tr style="height:80px; bgcolor:lightgreen;width:100%">

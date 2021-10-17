@@ -12,32 +12,25 @@
 	<link rel="icon" type="image/png" href="images/icons/leaf.ico"/>
         <title>PTGS</title>
         <style>
-            .table_scroll  Holds table with scrollbar
+            .table_scroll  
             {
-                width:70%;
-                height: 535px; 
                 overflow: auto;
-            }
-            body
-            {
-                font-size:20px;
             }
             .outer_table
             {
                 width:100%;
-                height:760px;
-                border:1px solid black;
+                border:0;
                 cellspacing:0px;
-                cellpadding:0px;
+                cellpadding:7px;
                 background-color:AliceBlue;
             }
             .inner_table
             {
-                width:1300px;
+                width:80%;
                 height:535px;
                 border:0;
                 cellspacing:0px;
-                cellpadding:0px;
+                cellpadding:10px;
             }
             input[type=text], select
             {
@@ -61,7 +54,14 @@
                 font-weight: bold;
                 margin-bottom:1em;
             }
+            th {
+                align: center ;
+                background-color: pink;
+            }
         </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <%
@@ -72,11 +72,11 @@
             }
         %>
         <table class="outer_table">
-            <tr style="height:70px; font-size:30px; background-color:orange; border:1px solid black;" >
+            <tr style="height:5%; font-size:30px; background-color:orange; border:1px solid black;" >
                 <td colspan="2" align="center"> <b>Welcome <%=session.getAttribute("nm")%></b> </td>
             </tr>
-            <tr style="height:620px; " >
-                <td style="width:450px; border:1px solid black; " >
+            <tr style="height:90% " >
+                <td style="width:20%; border:1px solid black; " >
                     <hr> <a href="index.jsp">Home</a>
                     <hr> <a href="add_transport_company.jsp">Add Transport Company</a>
                     <hr> <a href="add_bus.jsp">Add Bus</a>
@@ -85,4 +85,4 @@
                     <hr> <a href="view_complaints.jsp">View Complaints</a>
                     <hr> <a href="admin_login.jsp">Log Out</a>
                 </td>
-                <td style="vertical-align:top; border:1px solid black; ">
+                <td style="vertical-align:top; width:80%; ">

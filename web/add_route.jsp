@@ -1,15 +1,9 @@
-<%-- 
-    Document   : add_route
-    Created on : May 29, 2020, 11:28:13 PM
-    Author     : Vishali-PC
---%>
-
 <%@include file="header_admin.jsp" %>
 
 <form name="frm" method="post" action="add_route_query.jsp">
 <table class="inner_table">
     <tr>
-       	<td colspan=2 align="center" bgcolor="pink"><b> Add Route </b></td>
+       	<th colspan=2 >Add Route </th>
     </tr>
     <tr>
 	<td>Stoppage Name</td>

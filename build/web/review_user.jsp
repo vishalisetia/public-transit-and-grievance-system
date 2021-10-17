@@ -1,25 +1,19 @@
-<%-- 
-    Document   : review_user
-    Created on : May 30, 2020, 12:32:54 AM
-    Author     : Vishali-PC
---%>
-
 <%@ include file="header_user.jsp" %>
-
-        <form name="frm" method="post" action="review_user_query.jsp" >
-        <table style = "height:400px; width:500px; border:0px; cellspacing:0px; cellpadding:10px">
+<form name="frm" method="post" action="review_user_query.jsp" >
+    <table class="form_table">
         <tr>
-            <td colspan="2" align="center" bgcolor="pink" > <b> Review </b></td>
+            <th colspan="2"> Review </th>
         </tr>
         <tr>
             <td> Bus No </td>
             <td> <select name="t1" id="t1" required>
-                    <%
-                        ResultSet rs=db_layer.dblayer.getResult("select bus_no from buses order by bus_no");
-                        while(rs.next())
-                            out.print("<option value='"+rs.getString(1)+"'>"+rs.getString(1)+"</option>");
+                    <%                        
+                        ResultSet rs = db_layer.dblayer.getResult("select bus_no from buses order by bus_no");
+                        while (rs.next()) {
+                            out.print("<option value='" + rs.getString(1) + "'>" + rs.getString(1) + "</option>");
+                        }
                     %> 
-                 </select> 
+                </select> 
             </td>
         </tr>
         <tr>
@@ -33,25 +27,24 @@
                 <img src='images/star_empty.png' id='img2' name='img2' width='30' height='30' onmouseover="rate(2)">
                 <img src='images/star_empty.png' id='img3' name='img3' width='30' height='30' onmouseover="rate(3)">
                 <img src='images/star_empty.png' id='img4' name='img4' width='30' height='30' onmouseover="rate(4)">
-                <img src='images/star_empty.png' id='img5' name='img5' width='30' height='30' onmouseover="rate(5)">
-                
+                <img src='images/star_empty.png' id='img5' name='img5' width='30' height='30' onmouseover="rate(5)">               
                 <script language="javascript" >
                     function rate(k)
                     {
-                   for(i=1;i<=k;i++)
-                        document.getElementById("img"+i).src="images/star_full.png";
-                   for(i=k+1;i<=5;i++)
-                        document.getElementById("img"+i).src="images/star_empty.png";
-                   document.getElementById("t3").value=k;
+                        for (i = 1; i <= k; i++)
+                            document.getElementById("img" + i).src = "images/star_full.png";
+                        for (i = k + 1; i <= 5; i++)
+                            document.getElementById("img" + i).src = "images/star_empty.png";
+                        document.getElementById("t3").value = k;
                     }
                 </script>
-                
-                <input type="hidden" name="t3" id="t3"> </td>
+                <input type="hidden" name="t3" id="t3"> 
+            </td>
         </tr>
         <tr>
             <td colspan="2" align="center" > <input type="submit" value="OK"> </td>
         </tr>
-        </table>
-        </form>
-                    
+    </table>
+</form>
+
 <%@ include file="footer_user.jsp" %>

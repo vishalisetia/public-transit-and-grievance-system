@@ -1,15 +1,9 @@
-<%-- 
-    Document   : add_transport_company
-    Created on : May 29, 2020, 11:25:50 PM
-    Author     : Vishali-PC
---%>
-
 <%@include file="header_admin.jsp" %>
 
 <form name="form" method="post" action="add_transport_company_query.jsp">
 <table class="inner_table">
     <tr>
-       	<td colspan=2 align="center" bgcolor="pink"><b>Transport Company</b></td>
+       	<th colspan=2>Transport Company</th>
     </tr>
     <tr>
 	<td>Company Name</td>

@@ -1,9 +1,3 @@
-<%-- 
-    Document   : complaint_user_query
-    Created on : May 29, 2020, 11:49:20 PM
-    Author     : Vishali-PC
---%>
-
 <%@page language="java" import="java.sql.*" contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>

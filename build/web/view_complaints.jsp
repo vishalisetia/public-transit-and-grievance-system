@@ -1,14 +1,8 @@
-<%-- 
-    Document   : view_complaints
-    Created on : May 30, 2020, 12:09:55 AM
-    Author     : Vishali-PC
---%>
-
 <%@ include file="header_admin.jsp" %>
 
 <div class="table_scroll">
     <table class="inner_table">
-        <tr bgcolor="pink">
+        <tr bgcolor="pink"  height="10%">
             <th> Complaint ID </th>
             <th> Date Time of Report </th>
             <th> Name </th>
